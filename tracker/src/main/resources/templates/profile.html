@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile | Smart Tracker</title>
+    <link rel="stylesheet" th:href="@{/profile.css}">
+</head>
+<body>
+<!-- Header Section -->
+<div class="header">
+    <div class="brand">Smart Tracker</div>
+    <a th:href="@{/index.html}" class="btn header-btn">Logout</a>
+</div>
+
+<!-- Profile Banner (No image, gradient bg) -->
+<div class="banner">
+    <div class="profile-info">
+        <div class="avatar-placeholder">User</div>
+        <div class="info-text">
+            <h2 th:text="${modelname}"></h2>
+            <p>Smart Tracker Client</p>
+            <p>Email: <span th:text="${user.email}">john@example.com</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Intro Section -->
+<div class="intro-section">
+    <h3>Welcome to Your Profile</h3>
+    <p>Track your expenses, manage categories, and view monthly summaries all in one place.</p>
+    <div class="intro-actions">
+        <a th:href="@{/dashboard.html}" class="btn">Go to Dashboard</a>
+        <a th:href="@{/contact.html}" class="btn secondary-btn">Contact us</a>
+    </div>
+</div>
+
+<!-- Rating Section -->
+<div class="rating-section">
+    <p>Your Rating</p>
+    <div class="stars">
+        ★★★★☆ <span>(4.5)</span>
+    </div>
+</div>
+</body>
+</html>

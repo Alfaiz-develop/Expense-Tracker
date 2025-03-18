@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | Smart Tracker</title>
+  <link rel="stylesheet" th:href="@{/register.css}">
+</head>
+<body>
+<div class="form-container">
+  <h2>Create Account</h2>
+  <form th:action="@{/register}" th:object="${user}" method="post">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" th:field="*{username}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" th:field="*{email}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" th:field="*{password}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+    </div>
+
+    <button type="submit" class="register-button">Register</button>
+  </form>
+
+  <div th:if="${successMsg}">
+    <h3 style="color: green" th:text="${successMsg}"></h3>
+  </div>
+  <div th:if="${errorMsg}">
+    <h3 style="color: red" th:text="${errorMsg}"></h3>
+  </div>
+  <p class="login-link">
+    Already have an account?
+    <a th:href="@{/login.html}">Login here</a>
+  </p>
+</div>
+</body>
+</html>

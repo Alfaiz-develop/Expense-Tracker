@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f8fb;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #1a73e8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-btn {
+    background-color: white;
+    color: #1a73e8;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(to right, #1a73e8, #64b5f6);
+    padding: 40px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar-placeholder {
+    background-color: #ffffff33;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Intro Section */
+.intro-section {
+    background-color: #ffffff;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    text-align: center;
+}
+
+.intro-section h3 {
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.intro-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secondary-btn {
+    background-color: #64b5f6;
+}
+
+/* Rating */
+.rating-section {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+    font-size: 16px;
+}
+
+.stars {
+    color: #fbc02d;
+    font-size: 20px;
+}

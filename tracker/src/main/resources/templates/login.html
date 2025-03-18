@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Smart Tracker</title>
+  <link rel="stylesheet" th:href="@{/login.css}">
+</head>
+<body>
+<div class="form-container">
+  <h2>Login to Smart Tracker</h2>
+  <form th:action="@{/login}" th:object="${user}" method="post">
+    <div class="form-group">
+      <label for="email"> Email</label>
+      <input type="text" id="email" th:field="*{email}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" th:field="*{password}" required>
+    </div>
+
+    <!-- Optional Error Message -->
+    <div th:if="${errorMsg}">
+      <h3 style="color: red; font-size: 14px;" th:text="${errorMsg}"></h3>
+    </div>
+
+    <button type="submit" class="register-button">Login</button>
+  </form>
+
+  <p class="login-link">
+    Don’t have an account?
+    <a th:href="@{/register.html}">Register here</a>
+  </p>
+</div>
+</body>
+</html>
